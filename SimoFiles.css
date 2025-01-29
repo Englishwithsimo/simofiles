@@ -78,6 +78,7 @@
         input.answer {
             width: 200px;
             max-width: 100%;
+            text-align:center;
         }
 
         select.answer:hover, input.answer:hover {
