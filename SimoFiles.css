@@ -1,0 +1,184 @@
+.container {
+            background: khaki;
+            border-radius: 15px;
+            padding: clamp(15px, 5vw, 30px);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+          direction:ltr;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            margin-bottom: clamp(10px, 3vw, 20px);
+            color: red;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            word-wrap: break-word;
+        }
+
+        .exercise-question {
+            background: rgba(106, 17, 203, 0.1);
+            border-left: 10px solid orange;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            color: #333;
+        }
+
+        .verb-hint {
+            color: #6a11cb;
+            font-weight: bold;
+        }
+
+        .exercise {
+            margin: 20px 0;
+        }
+
+        .exercise p {
+            position: relative;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin: 20px 0;
+            color: black;
+            padding-left: 40px;
+        }
+
+        .number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #6a11cb;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .answer-container {
+            display: inline;
+        }
+
+        select.answer, input.answer {
+            padding: 8px 12px;
+            border: 2px solid rgba(106, 17, 203, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+            font-size: 1rem;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+
+        input.answer {
+            width: 200px;
+            max-width: 100%;
+        }
+
+        select.answer:hover, input.answer:hover {
+            border-color: rgba(106, 17, 203, 0.6);
+        }
+
+        select.answer:focus, input.answer:focus {
+            outline: none;
+            border-color: #6a11cb;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        input.answer::placeholder {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .correct {
+            color: #4caf50;
+            border-color: #4caf50 !important;
+        }
+
+        .incorrect {
+            color: #ff5252;
+            border-color: #ff5252 !important;
+        }
+
+        .feedback-icon {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1.2rem;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .feedback-icon.visible {
+            opacity: 1;
+        }
+
+        .fa-check-circle {
+            color: #4caf50;
+        }
+
+        .fa-times-circle {
+            color: #ff5252;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        button {
+            padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 24px);
+            border: none;
+            border-radius: 8px;
+            background: #6a11cb;
+            color: #fff;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+            max-width: 200px;
+        }
+
+        button:hover {
+            background: #2575fc;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .score {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin-top: 20px;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            .exercise p {
+                padding-left: 35px;
+            }
+
+            select.answer, input.answer {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .button-container {
+                flex-direction: column;
+            }
+
+            button {
+                max-width: none;
+            }
+        }
